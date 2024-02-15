@@ -52,21 +52,30 @@ export default function Home() {
     setSelectedImage(null);
   };
 
-  // Show the next image in the popup
   const handleNextImage = () => {
-    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
-    if (currentIndex !== -1 && currentIndex < images.length - 1) {
-      setSelectedImage(images[currentIndex + 1]);
+    if (selectedImage && images.length > 1) { // Ensure there are images to navigate
+      const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+      if (currentIndex !== -1 && currentIndex < images.length - 1) {
+        setSelectedImage(images[currentIndex + 1]);
+      } else {
+        // If currentIndex is already the last index, loop back to the first image
+        setSelectedImage(images[0]);
+      }
     }
   };
-
-  // Show the previous image in the popup
+  
   const handlePreviousImage = () => {
-    const currentIndex = images.findIndex(img => img.id === selectedImage.id);
-    if (currentIndex !== -1 && currentIndex > 0) {
-      setSelectedImage(images[currentIndex - 1]);
+    if (selectedImage && images.length > 1) { // Ensure there are images to navigate
+      const currentIndex = images.findIndex(img => img.id === selectedImage.id);
+      if (currentIndex !== -1 && currentIndex > 0) {
+        setSelectedImage(images[currentIndex - 1]);
+      } else {
+        // If currentIndex is already the first index, loop back to the last image
+        setSelectedImage(images[images.length - 1]);
+      }
     }
   };
+  
 
   // Handle scroll event to fetch more images when reaching the bottom of the page
   const handleScroll = () => {
