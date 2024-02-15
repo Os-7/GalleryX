@@ -2,7 +2,11 @@
 import styles from "../../styles/Image.module.css";
 
 // ImagePopup component to display an image popup with navigation buttons
+
 const ImagePopup = ({ image, onClose, onNext, onPrevious }) => {
+  if (!image) {
+    return null; // Render nothing if image is undefined
+  }
   return (
     // Outer container for the popup, clicking on it closes the popup
     <div className={styles.image_popup} onClick={onClose}>
