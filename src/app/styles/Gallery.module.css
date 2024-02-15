@@ -1,48 +1,53 @@
+/* Gallery grid container styles */
 .gallery_grid {
-  width: 100%;
-  padding:5% 10%;
-  margin: 20px auto;
-  columns: 5;
-  column-gap: 20px;
+  width: 100%; /* Full width */
+  padding: 5% 10%; /* 5% padding on top and bottom, 10% padding on left and right */
+  margin: 20px auto; /* Center horizontally with 20px top and bottom margin */
+  columns: 5; /* Default number of columns */
+  column-gap: 20px; /* Gap between columns */
 }
 
+/* Individual image container styles */
 .image_div {
-  width: 100%;
-  margin-bottom: 10px;
-  break-inside: avoid;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* 10px bottom margin */
+  break-inside: avoid; /* Avoid breaking inside columns */
+  cursor: pointer; /* Pointer cursor */
+  transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
+/* Hover effect for image containers */
 .image_div:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Scale up by 10% on hover */
 }
 
+/* Image styles */
 .gallery_grid .image_div img {
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.373);
-  padding: 5px;
+  border-radius: 10px; /* Rounded corners */
+  width: 100%; /* Full width */
+  background-color: rgba(0, 0, 0, 0.373); /* Semi-transparent background color */
+  padding: 5px; /* 5px padding */
 }
 
-@media (max-width: 1200px){
-  .gallery_grid{
-    width:calc(100%-40px);
-    columns: 4;
-    padding:5% 10%;
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .gallery_grid {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
+    columns: 4; /* Adjust number of columns */
+    padding: 5% 10%; /* Adjust padding */
   }
 }
 
-@media (max-width: 768px){
-  .gallery_grid{
-    columns: 3;
-    padding:8% 10%;
+@media (max-width: 768px) {
+  .gallery_grid {
+    columns: 3; /* Adjust number of columns */
+    padding: 8% 10%; /* Adjust padding */
   }
 }
 
-@media (max-width: 480px){
-  .gallery_grid{
-    columns: 2;
-    padding:10% 10%;
+@media (max-width: 480px) {
+  .gallery_grid {
+    columns: 2; /* Adjust number of columns */
+    padding: 10% 10%; /* Adjust padding */
   }
 }

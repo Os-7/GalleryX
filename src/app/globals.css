@@ -1,17 +1,22 @@
-/* styles.css */
-*{
+/* Reset default margin, padding, and box-sizing */
+* {
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
 }
+
+/* Body styles */
 body {
   height: 100%;
   width: 99%;
-  background: linear-gradient(45deg, #d2001a,#7462ff, #f48e21, #23d5ab);
+  /* Gradient background */
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
   background-size: 300% 300%;
+  /* Animation for background color */
   animation: color 12s ease-in-out infinite;
 }
 
+/* Custom scrollbar styles */
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: transparent;
@@ -29,26 +34,29 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 
+/* Keyframe animation for background color */
 @keyframes color {
-  0%{background-position:0 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0 50%;}
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
 }
 
+/* Fixed header styles */
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.335);  
-  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.335); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* Blur effect */
   padding: 10px 0;
-  z-index: 999;
-  border-radius: 0 0 15px 15px;
+  z-index: 999; /* Ensure header appears above other content */
+  border-radius: 0 0 15px 15px; /* Rounded corners */
 }
 
-.heading{
-  color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+/* Heading styles */
+.heading {
+  color: white; /* Text color */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+  text-align: center; /* Center alignment */
 }

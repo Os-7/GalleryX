@@ -1,96 +1,105 @@
+/* Popup container styles */
 .image_popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed; /* Fixed position */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 9999; /* Higher z-index to ensure it appears above other elements */
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
-.next_prev{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 136, 255, 0.531);
-  border-radius: 5px;
-  cursor: pointer;
+/* Next and previous buttons container */
+.next_prev {
+  display: flex; /* Flex layout */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: rgba(0, 136, 255, 0.531); /* Semi-transparent background color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
 }
 
-.next_prev button{
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  font-size: 34px;
-  color: white;
-  cursor: pointer;
+/* Next and previous buttons styles */
+.next_prev button {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  border: none; /* No border */
+  font-size: 34px; /* Font size */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor */
 }
 
-.prev_btn{
-  margin-right: 1%;
+/* Margin for previous button */
+.prev_btn {
+  margin-right: 1%; /* Right margin */
 }
 
-.next_btn{
-  margin-left: 1%;
+/* Margin for next button */
+.next_btn {
+  margin-left: 1%; /* Left margin */
 }
 
+/* Popup content styles */
 .popup_content {
-  background: white;
-  padding: 20px;
-  width: 40%;
-  height: auto;
-  border-radius: 8px;
+  background: white; /* White background */
+  padding: 20px; /* Padding */
+  width: 40%; /* Default width */
+  height: auto; /* Automatic height */
+  border-radius: 8px; /* Rounded corners */
 }
 
+/* Close button styles */
 .close_btn {
-  position: relative;
-  width: 100%;
-  text-align: end;
-  padding:  6px;
-  background: none;
-  border: none;
-  cursor: pointer;
+  position: relative; /* Relative position */
+  width: 100%; /* Full width */
+  text-align: end; /* Align to the end (right) */
+  padding: 6px; /* Padding */
+  background: none; /* Transparent background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
 }
 
-.next_prev img{
-  width: 90%;
-  max-height: 350px;
-  /* height: auto; */
+/* Next and previous button images styles */
+.next_prev img {
+  width: 90%; /* 90% width */
+  max-height: 350px; /* Maximum height */
 }
 
+/* Details section styles */
 .details {
-  margin-top: 20px;
-  font-size: 21px;
+  margin-top: 20px; /* Top margin */
+  font-size: 21px; /* Font size */
 }
 
-@media (max-width: 1200px){
-  .popup_content{
-    width: 50%;
-    height: auto;
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .popup_content {
+    width: 50%; /* Adjusted width */
+    height: auto; /* Automatic height */
   }
-  .next_prev button{
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 768px){
-  .popup_content{
-    width: 50%;
-    height: auto;
-  }
-  .next_prev button{
-    font-size: 25px;
+  .next_prev button {
+    font-size: 30px; /* Adjusted font size */
   }
 }
 
-@media (max-width: 480px){
-  .popup_content{
-    width: 90%;
-    height: auto;
+@media (max-width: 768px) {
+  .popup_content {
+    width: 50%; /* Adjusted width */
+    height: auto; /* Automatic height */
   }
-  .next_prev button{
-    font-size: 19px;
+  .next_prev button {
+    font-size: 25px; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .popup_content {
+    width: 90%; /* Adjusted width */
+    height: auto; /* Automatic height */
+  }
+  .next_prev button {
+    font-size: 19px; /* Adjusted font size */
   }
 }
