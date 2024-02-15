@@ -14,7 +14,7 @@ const GalleryGrid = ({ images, onImageClick }) => {
           alt={image.title}
           onClick={() => onImageClick(image)}
         /></div>
-      )): NULL}
+      )): null}
     </div>
   );
 };
