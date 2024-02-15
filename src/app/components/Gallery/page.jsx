@@ -8,9 +8,7 @@ const GalleryGrid = ({ images, onImageClick }) => {
     <div className={styles.gallery_grid}>
       {images ? images.map(image => (
         <div className={styles.image_div} key={id++}><img
-          src={image.
-            download_url
-            }
+          src={image.download_url}
           alt={image.title}
           onClick={() => onImageClick(image)}
         /></div>
